@@ -1,0 +1,16 @@
+node_modules/
+dist/
+build/
+coverage/
+.env
+logs/
+drizzle/
+*.log
+package-lock.json
+yarn.lock
+.vscode/
+.idea/
+.DS_Store
+*.test.js
+*.spec.js
+*.map
