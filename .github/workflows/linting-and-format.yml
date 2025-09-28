@@ -42,9 +42,9 @@ jobs:
         id: prettier
         run: |
           echo "::notice::Running Prettier format check..."
-          if ! npm run format:check; then
+          if ! npm run prettier; then
             echo "::error::Code formatting issues found"
-            echo "::notice::Run 'npm run format' to fix formatting issues"
+            echo "::notice::Run 'npm run prettier:fix' to fix formatting issues"
             exit 1
           fi
 
