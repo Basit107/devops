@@ -11,7 +11,8 @@
     "prettier": "prettier --check .",
     "prettier:fix": "prettier --write .",
     "docker:dev": "sh ./scripts/docker-dev.sh",
-    "docker:prod": "sh ./scripts/docker-prod.sh"
+    "docker:prod": "sh ./scripts/docker-prod.sh",
+    "test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --runInBand"
   },
   "type": "module",
   "keywords": [],
@@ -30,9 +31,13 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.36.0",
+    "@types/jest": "^30.0.0",
+    "cross-env": "^10.0.0",
     "eslint": "^9.36.0",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-prettier": "^5.5.4",
-    "prettier": "^3.6.2"
+    "jest": "^30.1.3",
+    "prettier": "^3.6.2",
+    "supertest": "^7.1.4"
   }
 }

@@ -22,4 +22,17 @@ app.get('/', (req, res) => {
   res.status(200).send('Welcome to DevOps API!');
 });
 
+app.get('/error', (req, res) => {
+  res.status(500).json({ message: 'Internal Server Error' });
+});
+
+app.use((req, res) => {
+  res.status(404).json({ error: 'Route not found' });
+});
+
+app.use((err, req, res, next) => {
+  logger.error(err.stack);
+  res.status(500).json({ message: 'Internal Server Error' });
+});
+
 export default app;
